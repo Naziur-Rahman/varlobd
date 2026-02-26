@@ -1,10 +1,17 @@
 import React from 'react'
+import { useRouteError } from 'react-router-dom'
 
-const ErrorPage = () => {
+const ErrorPage = () => { 
+
+   const error = useRouteError();
+  console.error(error);
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold text-center">Error Page</h1>
-      <p className="text-center mt-4">An error occurred while loading the page.</p>
+    <div id="error-page">
+      <h1>Oops!</h1>
+      <p>Sorry, an unexpected error has occurred.</p>
+      <p>
+        <i>{error.statusText || error.message}</i>
+      </p>
     </div>
   )
 }
