@@ -2,10 +2,11 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
+import Root from './component/root/Root';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div className='text-3xl font-bold text-center'>Hello world!</div>,
+    element: <Root />,
   },
 ]);
 
